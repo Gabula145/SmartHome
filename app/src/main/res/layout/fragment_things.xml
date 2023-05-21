@@ -1,205 +1,290 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     tools:context=".ui.things.ThingsFragment">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
+        android:id="@+id/toolbar2"
         android:layout_width="match_parent"
-        android:layout_height="87dp"
-        android:background="?attr/colorPrimary"
+        android:layout_height="wrap_content"
+        android:background="#FFEB3B"
+        android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:id="@+id/icon"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:layout_gravity="right"
-            android:padding="5dp"
-            android:src="@drawable/baseline_sort_24"
-            app:tint="@android:color/white" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginEnd="23dp"
+            android:src="@drawable/baseline_sort_24" />
 
         <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="end"
+            android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@+id/sort"
+            android:src="@drawable/baseline_saved_search_24" />
 
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:layout_gravity="right"
-            android:padding="5dp"
-            android:src="@drawable/baseline_saved_search_24"
-            app:tint="@android:color/white" />
 
         <TextView
-            android:id="@+id/title"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
+            android:id="@+id/textView17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:text="My Smart Home"
-            android:textColor="@android:color/white"
-            android:textSize="24sp"
-            android:textStyle="bold"/>
-
+            android:textColor="@color/white"
+            android:textSize="20sp" />
     </androidx.appcompat.widget.Toolbar>
 
 
-    <!-- TODO: Update blank fragment layout -->
-    <LinearLayout
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="116dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="105dp"
+        android:layout_marginTop="66dp"
+        android:layout_marginEnd="106dp"
+        android:layout_marginBottom="477dp"
+        android:src="@drawable/it"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </ImageView>
+
+
+    <TextView
+
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:gravity="center">
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="169dp"
+        android:layout_marginBottom="424dp"
+        android:fontFamily="sans-serif-medium"
+        android:padding="16dp"
+        android:text="No Things!"
+        android:textAlignment="center"
+        android:textColor="#B0A8A2A2"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="\n"
-            android:textSize="36dp"/>
-
-        <ImageView
-            android:layout_width="192dp"
-            android:layout_height="128dp"
-            android:layout_gravity="center"
-            android:src="@drawable/it" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="No Things"
-            android:textSize="36dp"
-            android:layout_gravity="center"
-            android:paddingBottom="5dp"/>
-
-        <TextView
-            android:layout_width="403dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="It looks like we didn't discover any devices"
-            android:textSize="20dp" />
-
-        <TextView
-            android:layout_width="197dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="Try an option below"
-            android:textSize="21dp"
-            android:padding="5dp"
-            android:paddingBottom="12dp"/>
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@android:color/darker_gray"
-            android:paddingTop="15dp"/>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingTop="12dp"
-            android:paddingLeft="15dp">
-
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/fab"
-                android:layout_width="70dp"
-                android:layout_height="50dp"
-                android:src="@drawable/zoom_out"
-                android:contentDescription="Search button"
-                app:backgroundTint="#1B29BA"/>
-
-            <TextView
-                android:layout_width="300dp"
-                android:layout_height="50dp"
-                android:textSize="28dp"
-                android:text="Run Discovery"
-                android:textColor="@color/blue"
-                android:paddingLeft="10dp"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingTop="20dp"
-            android:paddingLeft="15dp">
-
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
-
-                android:layout_width="70dp"
-                android:layout_height="50dp"
-                android:src="@drawable/baseline_add_24"
-                android:contentDescription="Add button"
-                app:backgroundTint="@color/blue"/>
-
-            <TextView
-                android:layout_width="300dp"
-                android:layout_height="50dp"
-                android:textSize="28dp"
-                android:text="Add a cloud account"
-                android:textColor="@color/blue"
-                android:paddingLeft="10dp"
-                android:padding="8dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="220dp"
+        android:layout_marginBottom="347dp"
+        android:fontFamily="sans-serif-medium"
+        android:padding="16dp"
+        android:text="It looks like we didn't discover any devices."
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
+    <TextView
 
-        </LinearLayout>
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingTop="20dp"
-            android:paddingLeft="15dp">
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="301dp"
+        android:layout_marginBottom="326dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Try an option below "
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
-
-                android:layout_width="70dp"
-                android:layout_height="50dp"
-                android:src="@android:drawable/ic_dialog_dialer"
-                android:contentDescription="view button"
-                app:backgroundTint="@color/blue"/>
-
-            <TextView
-                android:layout_width="450dp"
-                android:layout_height="50dp"
-                android:textSize="28dp"
-                android:text="View our supported devices"
-                android:textColor="@color/blue"
-                android:paddingLeft="2dp"
-                android:paddingTop="8dp"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingTop="20dp"
-            android:paddingLeft="15dp">
-
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
-
-                android:layout_width="70dp"
-                android:layout_height="50dp"
-                android:src="@drawable/envelope"
-                android:contentDescription="contact button"
-                app:backgroundTint="@color/blue"/>
-
-            <TextView
-                android:layout_width="300dp"
-                android:layout_height="50dp"
-                android:text="Contact Support"
-                android:textSize="28dp"
-                android:textColor="@color/blue"
-                android:paddingLeft="10dp"/>
+    <TextView
+        android:id="@+id/text_things"
+        android:layout_width="390dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
-        </LinearLayout>
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="123dp"
+        android:layout_marginTop="357dp"
+        android:layout_marginEnd="157dp"
+        android:layout_marginBottom="275dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Run Discovery"
+        android:textColor="#2394A3"
+        android:textFontWeight="800"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    </LinearLayout>
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="123dp"
+        android:layout_marginTop="433dp"
+        android:layout_marginEnd="99dp"
+        android:layout_marginBottom="199dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Add a Cloud account"
+        android:textColor="#2394A3"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="123dp"
+        android:layout_marginTop="501dp"
+        android:layout_marginEnd="34dp"
+        android:layout_marginBottom="131dp"
+        android:fontFamily="sans-serif-black"
+        android:text="View our supported devices"
+        android:textColor="#2394A3"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="123dp"
+        android:layout_marginTop="572dp"
+        android:layout_marginEnd="141dp"
+        android:layout_marginBottom="60dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Contact support"
+        android:textColor="#2394A3"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="346dp"
+        android:layout_marginEnd="299dp"
+        android:layout_marginBottom="257dp"
+        android:clickable="true"
+        android:src="@drawable/zoom_out"
+        app:backgroundTint="@color/blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="485dp"
+        android:layout_marginEnd="299dp"
+        android:layout_marginBottom="118dp"
+        android:clickable="true"
+        android:src="@android:drawable/ic_dialog_dialer"
+        app:backgroundTint="@color/blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="452dp"
+        android:layout_marginEnd="299dp"
+        android:clickable="true"
+        android:paddingTop="360dp"
+        android:src="@drawable/baseline_add_24"
+        app:backgroundTint="@color/blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="557dp"
+        android:layout_marginEnd="299dp"
+        android:layout_marginBottom="46dp"
+        android:clickable="true"
+        android:src="@drawable/envelope"
+        app:backgroundTint="@color/blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
