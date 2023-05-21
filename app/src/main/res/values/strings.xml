@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Smart Home</string>
+    <string name="title_favorites">Favorites</string>
+    <string name="title_things">Things</string>
+    <string name="title_routines">Routines</string>
+    <string name="title_ideas">Ideas</string>
+    <string name="title_settings">Settings</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+        <string name="time_text">The time is <b>Time</b></string>
+        <string name="location_text">It\'s sunset at <b>Location</b></string>
+        <string name="text">It\'s 15 minutes before sunrise\n at <b>Location</b></string>
+
+        <string name="sunrise_text">It\'s 15 minutes after sunrise\n at <b>Location</b></string>
+        <string name="sunset_text">It\'s 15 minutes after sunset\n at <b>Location</b></string>
+        <string name="set_text">It\'s 15 minutes before sunset\n at <b>Location</b></string>
+
+
+</resources>

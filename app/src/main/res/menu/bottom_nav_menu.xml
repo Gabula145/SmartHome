@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_favorites"
+        android:icon="@android:drawable/btn_star_big_off"
+        android:title="@string/title_favorites" />
+
+    <item
+        android:id="@+id/navigation_things"
+        android:icon="@drawable/thingsss"
+        android:title="@string/title_things" />
+
+    <item
+        android:id="@+id/navigation_routines"
+        android:icon="@android:drawable/ic_menu_rotate"
+        android:title="@string/title_routines" />
+    <item
+        android:id="@+id/navigation_ideas"
+        android:icon="@drawable/ideas1"
+        android:title="@string/title_ideas" />
+    <item
+        android:id="@+id/navigation_settings"
+        android:icon="@drawable/settings1"
+        android:title="@string/title_settings" />
+
+
+</menu>

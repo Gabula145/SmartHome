@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#FFFFFF"
+    android:layout_height="match_parent"
+    tools:context=".ui.routines.RoutinesFragment">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFEB3B">
+        <TextView
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="My Smart Home"
+            android:textColor="@color/white"
+            android:textSize="25sp">
+
+        </TextView>
+
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center">
+        <ImageView
+            android:layout_width="181dp"
+            android:layout_height="129dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="113dp"
+            android:layout_marginBottom="453dp"
+            android:src="@drawable/ic_routine">
+
+        </ImageView>
+
+
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center"
+            android:layout_marginBottom="277dp"
+            android:text="Click the '+' button below to get started"
+            android:padding="16dp"
+            android:textAlignment="center"
+            android:textColor="#716711"
+            android:textSize="24sp" />
+
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center"
+            android:layout_marginBottom="344dp"
+            android:text="No Routines!"
+            android:padding="16dp"
+            android:textAlignment="center"
+            android:textColor="#9A5E5D53"
+            android:textSize="35sp" />
+
+
+    </RelativeLayout>
+</FrameLayout>
