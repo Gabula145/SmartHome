@@ -117,9 +117,6 @@
                 android:textColor="@color/blue"
                 android:paddingLeft="10dp"/>
 
-
-
-
         </LinearLayout>
 
         <LinearLayout
